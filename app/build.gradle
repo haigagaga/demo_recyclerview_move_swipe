@@ -29,6 +29,7 @@ dependencies {
     implementation 'com.android.support:cardview-v7:24.1.1'
 
 }
+//在开发过程中,有的时候引入了多个三方库.在调用的时候会出现版本对应不上的原因,需要强制版本号统一解决办法，在app和Module: Library的build.gradle添加如下代码
 configurations.all {
     resolutionStrategy.eachDependency { DependencyResolveDetails details ->
         def requested = details.requested
